@@ -3,9 +3,9 @@
 
   // ---- typing sequence ----
   var lines = [
-    {p:'$ whoami', o:'[name]', cls:'out'},
+    {p:'$ whoami', o:'Anshul Singh', cls:'out'},
     {p:'$ cat role.txt', o:'Student Developer · Python', cls:'out'},
-    {p:'$ cat status.txt', o:'building things and breaking them since [year]', cls:'out small'}
+    {p:'$ cat status.txt', o:'building things and breaking them since 2022', cls:'out small'}
   ];
   var body = document.getElementById('typedBody');
 
