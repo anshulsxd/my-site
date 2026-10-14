@@ -3,171 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anshul — Python Developer</title>
+<title>Anshul | Student Developer</title>
 <link rel="icon" type="image/png" href="assets/favIcon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<div class="progress-bar" id="progressBar"></div>
-<div class="cur-ring" id="curRing"></div>
-<div class="cur-dot" id="curDot"></div>
+<body class="ld">
+<div id="loader"><div><code>booting anshul.py</code><b id="pct">0%</b><i><u id="bar"></u></i></div></div>
+<div id="prog"></div><div class="cd"></div><div class="cr"></div>
+<canvas id="bg"></canvas>
 <div class="toast" id="toast"></div>
 
-<header class="nav">
-  <div class="nav-inner">
-    <div class="nav-brand"><span class="dot"></span>Anshul</div>
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" data-target="home" class="active">home</a>
-      <a href="#about" data-target="about">about</a>
-      <a href="#projects" data-target="projects">projects</a>
-      <a href="#contact" data-target="contact">contact</a>
-    </nav>
-  </div>
+<header>
+  <a href="#home" class="logo">&lt;Anshul/&gt;</a>
+  <nav><a href="#about">about</a><a href="#projects">projects</a><a href="#journey">journey</a><a href="#contact">contact</a></nav>
+  <div class="hr"><div class="dots"><button data-c="0"></button><button data-c="1"></button><button data-c="2"></button><button data-c="3"></button></div><button id="kbtn" class="k">⌘K</button></div>
 </header>
 
-<main class="wrap">
+<main>
+<section id="home" class="hero">
+  <p class="hello rv"><b class="live"></b> available for collabs &amp; cool ideas</p>
+  <h1 id="name" data-scr="Anshul Chanderiya">Anshul</h1>
+  <p class="role rv"><span id="role"></span><b class="caret"></b></p>
+  <p class="lead rv">Student developer crafting Python projects that automate, analyse and occasionally break. Always shipping something new.</p>
+  <div class="row rv"><a href="#projects" class="btn pri mag">explore my work <i>→</i></a><a href="#contact" class="btn mag">let's talk <i>→</i></a></div>
+  <p class="hint rv">press <kbd>Ctrl</kbd> + <kbd>K</kbd> to navigate</p>
+</section>
 
-  <section class="hero" id="home">
-    <div class="terminal">
-      <div class="terminal-bar">
-        <span></span><span></span><span></span>
-        <div class="title">intro.py — zsh</div>
-      </div>
-      <div class="terminal-body" id="typedBody" aria-live="polite"></div>
-    </div>
-    <div class="hero-sub">
-      <span class="chip">Python</span>
-      <span class="chip">MySQL</span>
-      <span class="chip">APIs</span>
-      <span class="chip">Git & GitHub</span>
-    </div>
+<div class="mq"><div id="mqt"><span>python</span><em>✦</em><span>tkinter</span><em>✦</em><span>automation</span><em>✦</em><span>mysql</span><em>✦</em><span>apis</span><em>✦</em><span>code</span><em>✦</em></div></div>
 
-    <div class="stats-row">
-      <div class="stat tilt">
-        <p class="stat-num">🎓</p>
-        <p class="stat-label">Student Developer</p>
-      </div>
-      <div class="stat tilt">
-        <p class="stat-num">10+</p>
-        <p class="stat-label">Python projects built</p>
-      </div>
-      <div class="stat tilt">
-        <p class="stat-num">5</p>
-        <p class="stat-label">years writing code</p>
-      </div>
-      <div class="stat tilt">
-        <p class="stat-num">25+</p>
-        <p class="stat-label">lines of "it finally works"</p>
-      </div>
+<section id="about">
+  <h2 class="rv" data-scr="about me">about me</h2>
+  <div class="bento">
+    <div class="card tilt rv b-bio"><div class="avatar">A</div><h3>Anshul Chanderiya</h3><p class="mut big">Student developer, studying Python and My SQL. Python is how I think out loud. I've built 10+ projects, from utility tools to database and API-based application, and I'm now exploring Finance.</p></div>
+    <div class="card tilt rv b-st"><b data-n="10+">0</b><span>python projects</span></div>
+    <div class="card tilt rv b-st"><b data-n="5+">0</b><span>years coding</span></div>
+    <div class="card tilt rv b-sk"><h3>skills</h3>
+      <div class="sk"><span>python</span><i data-w="75"></i></div>
+      <div class="sk"><span>mysql</span><i data-w="70"></i></div>
+      <div class="sk"><span>git and github</span><i data-w="60"></i></div>
     </div>
-  </section>
+    <div class="card tilt rv b-now"><span class="mut">currently learning</span><h3>backend development</h3><span class="mut"></span></div>
+  </div>
+</section>
 
-  <section id="about">
-    <div class="sec-head">
-      <span class="idx">02</span>
-      <h2>about<span class="file-ext">.py</span></h2>
-    </div>
-    <div class="about-grid">
-      <div class="code-block">
-        <div><span class="ln">01</span><span class="comment"># a few honest lines about me</span></div>
-        <div><span class="ln">02</span><span class="comment"># -----------------------------</span></div>
-        <div><span class="ln">03</span><span class="comment"># Student intrested in IT, programming, logic, mechanics and understanding how things work.</span></div>
-        <div><span class="ln">04</span><span class="comment"># I got into Python because it lets me turn ideas into working programs without getting buried in UI.</span></div>
-        <div><span class="ln">05</span><span class="comment"># Outside coding, I’m interested in mechanics and technology and like exploring how things work.</span></div>
-        <div><span class="ln">06</span><span class="comment"># Fun fact: I often start a new project before finishing the previous one.</span></div>
-      </div>
-      <div class="about-copy">
-        <p><strong>Anshul Singh</strong> — I'm a student developer studying Python and MySQL, and Python is basically how I think out loud. Over the past 5 years I've built 15+ projects, ranging from utility tools to database and API-based applications, mostly because I get an idea and can't leave it alone until it runs.</p>
-        <p>Right now I'm digging into DSA and Backend. I like building useful tools, working with databases and APIs and understanding what’s happening behind the scenes instead of just making something that looks good.</p>
-        <div class="imports">
-          <span>import python</span>
-          <span>import sqlite</span>
-          <span>import api</span>
-          <span>import git</span>
-          <span>import mechanics</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="projects">
+  <h2 class="rv" data-scr="projects">projects</h2>
+  <div class="flt rv"><button class="on" data-f="all">all</button><button data-f="web">api</button><button data-f="data">sim</button><button data-f="tools">tools</button></div>
+  <div class="grid3">
+    <article class="card tilt rv" data-t="web"><span class="num">01</span><h3>GitHub User Account Details Fetcher</h3><p class="mut">Fetches and displays GitHub user information using the GitHub API.</p><div class="chips"><span>python</span><span>api</span></div><a class="lnk" href="https://github.com/anshulsxd/GitHub-User-Details-Fetcher" target="_blank" rel="noopener">open project ↗</a></article>
+    <article class="card tilt rv" data-t="data"><span class="num">02</span><h3>Bank Simulator</h3><p class="mut">A banking simulation with user accounts, secure password hashing, and balance management.</p><div class="chips"><span>python</span><span>sim</span></div><a class="lnk" href="https://github.com/anshulsxd/bank-simulation" target="_blank" rel="noopener">open project ↗</a></article>
+    <article class="card tilt rv" data-t="tools"><span class="num">03</span><h3>Task Reminder</h3><p class="mut">A Python-based task reminder app that helps users organize tasks and stay on track with timely reminders.</p><div class="chips"><span>python</span><span>tool</span></div><a class="lnk" href="https://github.com/anshulsxd/task-reminder" target="_blank" rel="noopener">open project ↗</a></article>
+    <article class="card tilt rv" data-t="web"><span class="num">04</span><h3>Location Tracker form IP</h3><p class="mut">A tool that retrieves an IP address and displays its approximate geographic and network information.</p><div class="chips"><span>python</span><span>api</span></div><a class="lnk" href="https://github.com/anshulsxd/Location-tracker-from-IP" target="_blank" rel="noopener">open project ↗</a></article>
+    <article class="card tilt rv" data-t="data"><span class="num">05</span><h3>Number guessing game</h3><p class="mut">A simple number guessing game where players guess a randomly generated number and receive hints until they find the correct answer.</p><div class="chips"><span>C#</span><span>sim</span></div><a class="lnk" href="https://github.com/anshulsxd/number-guessing-game-csharp" target="_blank" rel="noopener">open project ↗</a></article>
+    <article class="card tilt rv" data-t="tools"><span class="num">06</span><h3>Multiuser Expense Tracker</h3><p class="mut">A multi-user expense management app with GUI, account authentication and SQLite database storage.</p><div class="chips"><span>finance</span><span>tool</span></div><a class="lnk" href="https://github.com/anshulsxd/gui-multiuser-expense-tracker" target="_blank" rel="noopener">open project ↗</a></article>
+  </div>
+</section>
 
-  <section id="projects">
-    <div class="sec-head">
-      <span class="idx">03</span>
-      <h2>projects<span class="file-ext">/</span></h2>
-    </div>
-    <div class="proj-list">
-      <div class="proj-header-row">
-        <span>name</span><span>stack</span><span>link</span>
-      </div>
+<section id="journey">
+  <h2 class="rv" data-scr="journey">journey</h2>
+  <div class="tl">
+    <div class="rv"><b>2022</b><h3>First time code HTML and CSS</h3><p class="mut">It was first time I discovered coding in 6th grade through my school textbook.</p></div>
+    <div class="rv"><b>2024</b><h3>Wrote my first print("hello world!")</h3><p class="mut">Discovered Python while researching servers and how they work, sparking my interest in programming.</p></div>
+    <div class="rv"><b>2025</b><h3>Built my first real project and joined GitHub</h3><p class="mut">Built my first real project, Expense Tracker, which has since evolved into a more advanced application.</p></div>
+    <div class="rv"><b>now</b><h3>Learning Backend Development</h3><p class="mut">Learning server-side programming, APIs, databases, and how applications work behind the scenes.</p></div>
+  </div>
+</section>
 
-      <div class="proj-item tilt">
-        <div>
-          <p class="proj-name">GitHub User Account Details Fetcher</p>
-          <p class="proj-desc">Fetches and displays GitHub user information using the GitHub API.</p>
-        </div>
-        <div class="proj-tags"><span>python</span><span>api</span></div>
-        <a class="proj-link" href="https://github.com/anshulsxd/GitHub-User-Details-Fetcher" target="_blank" rel="noopener">view →</a>
-      </div>
-
-      <div class="proj-item tilt">
-        <div>
-          <p class="proj-name">Location Tracker form IP</p>
-          <p class="proj-desc">A tool that retrieves an IP address and displays its approximate geographic and network information.</p>
-        </div>
-        <div class="proj-tags"><span>python</span><span>api</span></div>
-        <a class="proj-link" href="https://github.com/anshulsxd/Location-tracker-from-IP" target="_blank" rel="noopener">view →</a>
-      </div>
-
-      <div class="proj-item tilt">
-        <div>
-          <p class="proj-name">Multiuser Expense Tracker</p>
-          <p class="proj-desc">A multi-user expense management app with GUI, account authentication and SQLite database storage.</p>
-        </div>
-        <div class="proj-tags"><span>python</span><span>gui</span></div>
-        <a class="proj-link" href="https://github.com/anshulsxd/gui-multiuser-expense-tracker" target="_blank" rel="noopener">view →</a>
-      </div>
-
-      <div class="proj-item tilt">
-        <div>
-          <p class="proj-name">Multiuser Banking System</p>
-          <p class="proj-desc">A banking simulation with user accounts, secure password hashing, and balance management.</p>
-        </div>
-        <div class="proj-tags"><span>python</span><span>file i/o</span></div>
-        <a class="proj-link" href="https://github.com/anshulsxd/bank-simulation" target="_blank" rel="noopener">view →</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="sec-head">
-      <span class="idx">04</span>
-      <h2>contact<span class="file-ext">.py</span></h2>
-    </div>
-    <div class="contact-block">
-      <div><span class="kw">def</span> <span class="fn">reach_me</span>():</div>
-      <div class="indent"><span class="kw">return</span> {</div>
-      <div class="indent" style="padding-left:48px;">"github": <a href="https://github.com/anshulsxd" id="emailLink">"[github]"</a><button class="copy-btn" id="copyEmailBtn" type="button">copy</button>,</div>
-      <div class="indent" style="padding-left:48px;">"instagram": <a href="https://www.instagram.com/anshulsxd" target="_blank" rel="noopener">"[instagram]"</a>,</div>
-      <div class="indent" style="padding-left:48px;">"twitter": <a href="https://x.com/@anshulsxd" target="_blank" rel="noopener">"[twitter]"</a></div>
-      <div class="indent">}</div>
-    </div>
-    <div class="send-row">
-      <a class="btn" href="https://x.com/messages/compose?recipient_id=anshulsxd">$ send_message()</a>
-      <a class="btn ghost" href="https://github.com/anshulsxd/my-site" target="_blank" rel="noopener">view source</a>
-    </div>
-  </section>
-
+<section id="contact">
+  <h2 class="rv" data-scr="let's talk">let's talk</h2>
+  <form id="cf" class="rv" data-email="[email]">
+    <div class="fld"><input id="fn" placeholder=" " required><label for="fn">your name</label></div>
+    <div class="fld"><textarea id="fm" rows="4" placeholder=" " required></textarea><label for="fm">your message</label></div>
+    <div class="row"><button class="btn pri mag" type="submit">send message <i>→</i></button><button class="btn mag" type="button" id="discord">discord ↗</button><a href="https://github.com/anshulsxd" id="gh" target="_blank" rel="noopener" class="btn mag">github ↗</a><a href="https://x.com/anshulsxd" target="_blank" rel="noopener" class="btn mag">x ↗</a></div>
+  </form>
+</section>
 </main>
 
-<footer>
-  built by Anshul<span class="blink"></span>
-</footer>
+<footer>built by Anshul<b class="caret"></b><br><a href="#home" class="top">↑ back to top</a></footer>
 
+<div id="pal"><div class="pb"><input id="pi" placeholder="type a command..." autocomplete="off"><ul id="pl"></ul></div></div>
 <script src="script.js"></script>
-
 </body>
 </html>
